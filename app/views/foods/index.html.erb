@@ -1,10 +1,10 @@
-<h1> All Foods </h1>
+<h1>Search Results</h1>
 
-<% @facade.all_foods.each do |food|%>
+<% @facade.all_foods.each do |food| %>
   <ul class="food">
-  <li class="code"><%= food.code %></li>
-  <li class="description"><%= food.description %></li>
-  <li class="brand"><%= food.brand %></li>
-  <li class="ingredients"><%= food.ingredients %></li>
-</ul>
+    <li class="code">Food Code: <%= food.code %></li>
+    <li class="description">Food: <%= food.description %></li>
+    <li class="brand">Brand: <%= food.brand %></li>
+    <li class="ingredients"> Ingredients Listed: <%= food.ingredients %></li>
+  </ul>
 <% end %>
