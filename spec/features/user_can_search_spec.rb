@@ -9,7 +9,10 @@ feature "user can search for foods using the search bad" do
     click_on "Search"
 
     expect(current_path).to eq(foods_path)
-    expect(page).to have_content("Wesh")
+    expect(page).to have_content("8901020020844")
+    expect(page).to have_content("SWEET POTATOES")
+    expect(page).to have_content("NOT A BRANDED ITEM")
+    expect(page).to have_content("ORGANIC SWEET POTATOES")
   end
 end
 

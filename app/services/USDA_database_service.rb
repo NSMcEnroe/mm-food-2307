@@ -1,7 +1,7 @@
 class USDADatabaseService
   def conn
     Faraday.new(url: "https://api.nal.usda.gov") do |faraday|
-      faraday.params["api_key"] = Rails.application.credentials.nps[:key]
+      faraday.params["api_key"] = Rails.application.credentials.usda[:key]
     end 
   end
 

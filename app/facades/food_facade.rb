@@ -5,11 +5,10 @@ class FoodFacade
 
   def all_foods
 
-    data = USDADatabaseService.new.foods_with_ingredient(ingredient)
+    data = USDADatabaseService.new.foods_with_ingredient(@ingredient)
 
     foods = data[:foods].map do |food_data|
       Food.new(food_data)
     end
-
-    foods.limit(10)
   end
+end
