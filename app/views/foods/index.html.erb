@@ -1,0 +1,10 @@
+<h1> All Foods </h1>
+
+<% @facade.all_foods.each do |food|%>
+  <ul class="food">
+  <li class="code"><%= food.code %></li>
+  <li class="description"><%= food.description %></li>
+  <li class="brand"><%= food.brand %></li>
+  <li class="ingredients"><%= food.ingredients %></li>
+</ul>
+<% end %>
