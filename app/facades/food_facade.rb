@@ -7,7 +7,7 @@ class FoodFacade
 
     data = USDADatabaseService.new.foods_with_ingredient(@ingredient)
 
-    foods = data[:foods].map do |food_data|
+    foods = data[:foods].first(10).map do |food_data|
       Food.new(food_data)
     end
   end
